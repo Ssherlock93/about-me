@@ -1,10 +1,15 @@
 h1 {
-    color: red
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(28, 143, 172);
+    display: inline;
     
 }
-li {
-    color: blue
+ol {
+    color: black;
 }
-p {
-    border-style: solid
-}
+
+body {
+    background-color: silver;
+    font-family: Arial, Helvetica, sans-serif;
+}  
