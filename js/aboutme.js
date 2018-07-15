@@ -1,7 +1,7 @@
 'use strict';
 
 var wrong, correct, incorrect;
-wrong = ('That\'s not what I was looking for... Try Yes or No');
+wrong = ('That\'s not what I was looking for... Try YES or NO');
 correct = 0;
 console.log('correct', correct);
 console.log('incorrect', incorrect);  
@@ -44,10 +44,10 @@ questionOne();
 function questionTwo() {
   prompt('Answer the following questions with Yes or No ');
   var userHappy = prompt('Well, ' + userName + ', Are you happy with your height?');
-  if (userHappy === 'Yes') {
+  if (userHappy.toUpperCase() === 'YES') {
     alert('That is great to hear');
     correct++;
-  } else if (userHappy === 'No') {
+  } else if (userHappy.toUpperCase() === 'NO') {
     alert('Well, there isn\'t much you can do about it');
     incorrect++;
   } else {
@@ -65,13 +65,13 @@ questionTwo();
 
 function questionThree() {
   var userCars = prompt(userName + ',Do you like cars?');
-  while (userCars !== 'Yes') {
+  while (userCars.toUpperCase() !== 'YES') {
     userCars = prompt(wrong);
     correct++;
     break;
 
   }
-  if (userCars === 'No') {
+  if (userCars.toUpperCase() === 'No') {
     alert('There must be something else that intersts you then');
     incorrect++;
   } else {
@@ -87,10 +87,10 @@ questionThree();
 // //coding question
 function questionFour() {
   var userCode = prompt('Do you love coding? (Trick question!)');
-  if (userCode === 'Yes') {
+  if (userCode.toUpperCase() === 'YES') {
     alert('Great answer');
     correct++;
-  } else if (userCode === 'No') {
+  } else if (userCode.toUpperCase() === 'NO') {
     alert('I\'ll accept that, but I don\'t like it');
     incorrect++;
   } else {
@@ -102,15 +102,15 @@ function questionFour() {
 questionFour();
 
 
-//;
+
 
 // //traffic question
 function questionFive() {
   var userTraffic = prompt('Do you enjoy Seattle traffic?');
-  if (userTraffic === 'Yes') {
+  if (userTraffic.toUpperCase() === 'YES') {
     alert('That\'s strange!');
     incorrect++;
-  } else if (userTraffic === 'No') {
+  } else if (userTraffic.toUpperCase() === 'NO') {
     alert('Don\'t we all');
     correct++;
   } else {
@@ -121,13 +121,13 @@ function questionFive() {
 
 questionFive();
 
-// //indent question
+// // Questions about eye color
 function questionSix() {
   var userEye = prompt('Are your eyes green?');
-  if (userEye === 'No') {
+  if (userEye.toUpperCase() === 'NO') {
     alert('correct!');
     correct++;
-  } else if (userEye === 'Yes') {
+  } else if (userEye.toUpperCase() === 'YES') {
     alert(wrong);
     incorrect++;
   }
