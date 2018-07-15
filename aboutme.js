@@ -4,10 +4,13 @@ var wrong, correct, incorrect;
 wrong = ('That\'s not what I was looking for... Try Yes or No');
 correct = 0;
 console.log('correct', correct);
-console.log('incorrect', incorrect);
+console.log('incorrect', incorrect);  
+
+function name() {
 
 var userName = prompt('Hello, what is your name?');
 console.log('userName', userName);
+}
 
 
 //height question .
