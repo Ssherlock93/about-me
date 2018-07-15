@@ -11,7 +11,7 @@ function name() {
 var userName = prompt('Hello, what is your name?');
 console.log('userName', userName);
 }
-
+name();
 
 //height question .
 //Use this question and wrap it in a function.
