@@ -64,14 +64,12 @@ questionTwo();
 // Third question asking if I like cars
 
 function questionThree() {
-  var userCars = prompt(userName + ',Do I like cars?');
-  while (userCars.toUpperCase() === 'YES') {
-    userCars = prompt('That is right!');
+  var userCars = prompt(userName + 'Do I like cars?');
+  if (userCars.toUpperCase() === 'YES') {
+    alert('That is right!');
     rightAnswers++;
-    
 
-  }
-  if (userCars.toUpperCase() === 'No') {
+   } else if(userCars.toUpperCase() === 'NO') {
     alert('There must be something else that intersts you then');
     incorrect++;
   } else {
