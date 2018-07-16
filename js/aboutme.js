@@ -1,9 +1,10 @@
 'use strict';
 
-var wrong, correct, incorrect;
+var wrong, rightAnswers, incorrect;
 wrong = ('That\'s not what I was looking for... Try YES or NO');
-correct = 0;
-console.log('correct', correct);
+rightAnswers = 0;
+incorrect = 0;
+console.log('rightAnswers', rightAnswers);
 console.log('incorrect', incorrect);  
 
 function name() {
@@ -20,14 +21,13 @@ name();
 
 function questionOne() {
 
-  var userHeight = prompt('Hi, ' + userName + '. How tall are you? (in inches)');
-  if (userHeight > 72) {
-    alert('That is so tall!');
+  var userHeight = prompt('Am I 6 feet 4 inches?');
+  if (userHeight.toUpperCase()=== 'YES') {
+    alert('Why yes, yes I am');
   }
-  if (userHeight <= 72) {
-    alert('That\'s about average');
-  } else if (userHeight < 60) {
-    alert('I am sorry to hear that');
+  if (userHeight.toUpperCase() === 'NO') {
+    alert('Sorry, I really am that tall!');
+  } else {
   }
   console.log('userHeight', userHeight);
 }
@@ -39,16 +39,16 @@ questionOne();
 
 
 
-// // content with height question
+// Question two asking if I enjoy my height
 
 function questionTwo() {
   prompt('Answer the following questions with Yes or No ');
-  var userHappy = prompt('Well, ' + userName + ', Are you happy with your height?');
+  var userHappy = prompt('Well, am I happy with my height?');
   if (userHappy.toUpperCase() === 'YES') {
-    alert('That is great to hear');
-    correct++;
+    alert('That is correct');
+    rightAnswers++;
   } else if (userHappy.toUpperCase() === 'NO') {
-    alert('Well, there isn\'t much you can do about it');
+    alert('Well, there isn\'t much I can do about it');
     incorrect++;
   } else {
     alert(wrong);
@@ -61,14 +61,14 @@ questionTwo();
 
 
 
-// car questions
+// Third question asking if I like cars
 
 function questionThree() {
-  var userCars = prompt(userName + ',Do you like cars?');
-  while (userCars.toUpperCase() !== 'YES') {
-    userCars = prompt(wrong);
-    correct++;
-    break;
+  var userCars = prompt(userName + ',Do I like cars?');
+  while (userCars.toUpperCase() === 'YES') {
+    userCars = prompt('That is right!');
+    rightAnswers++;
+    
 
   }
   if (userCars.toUpperCase() === 'No') {
@@ -84,12 +84,12 @@ function questionThree() {
 questionThree();
 
 
-// //coding question
+// Fourth question reguarding my love for coding
 function questionFour() {
-  var userCode = prompt('Do you love coding? (Trick question!)');
+  var userCode = prompt('Do I love coding? (Trick question!)');
   if (userCode.toUpperCase() === 'YES') {
     alert('Great answer');
-    correct++;
+    rightAnswers++;
   } else if (userCode.toUpperCase() === 'NO') {
     alert('I\'ll accept that, but I don\'t like it');
     incorrect++;
@@ -104,15 +104,16 @@ questionFour();
 
 
 
-// //traffic question
+// Fifth question about whether or not I enjoy Seattle Traffic
+
 function questionFive() {
-  var userTraffic = prompt('Do you enjoy Seattle traffic?');
+  var userTraffic = prompt('Do I enjoy Seattle traffic?');
   if (userTraffic.toUpperCase() === 'YES') {
     alert('That\'s strange!');
     incorrect++;
   } else if (userTraffic.toUpperCase() === 'NO') {
     alert('Don\'t we all');
-    correct++;
+    rightAnswers++;
   } else {
     alert(wrong);
   }
@@ -121,19 +122,50 @@ function questionFive() {
 
 questionFive();
 
-// // Questions about eye color
+// Question six about eye color
 function questionSix() {
-  var userEye = prompt('Are your eyes green?');
+  var userEye = prompt('Are my eyes green?');
   if (userEye.toUpperCase() === 'NO') {
-    alert('correct!');
-    correct++;
-  } else if (userEye.toUpperCase() === 'YES') {
-    alert(wrong);
+    alert('correct! They\'re blue');
+    rightAnswers++;
+  } 
+  else if (userEye.toUpperCase() === 'YES') {
+    alert('nope! They are blue!');
     incorrect++;
   }
   
 
-  console.log('correct', correct);
+  console.log('rightAnswers', rightAnswers);
   console.log('incorrect', incorrect);
 }
 questionSix();
+
+//Question 7 is a number guessing game where the user will have 4 tries to 
+// guess my favorite number
+
+var favoriteNumber = '18';
+var userGuess; 
+alert('Next is a question where you only have 4 chances to guess the correct answer');
+for (i = 0; i < 4; i++) {
+  userGuess = prompt('What is my favorite number?');
+  if (userGuess === '18') {
+    alert('That is my favorite number!');
+    rightAnswers++;
+    break;
+  } else if (userGuess < 18) {
+    alert('to low! try a little higher');
+  } else if (userGuess > 18) {
+    alert('Too high!');
+  }
+}
+  console.log('rightAnswers',rightAnswers);
+  console.log('incorrect', incorrect);
+
+// Car brands that I currently own question
+// User gets 6 trys to guess the names of some of the car brands that I have
+
+// function whichCar() {
+// var carBrand = ['MAZDA', 'FORD', 'SCION',];
+// var guess = 0;
+// var correctCar = [];
+
