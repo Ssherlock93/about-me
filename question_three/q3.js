@@ -1,28 +1,30 @@
-function sumAndMultiply(a, b, c) {
-  var mult = multiply;
-  var add = sum;
+
+function sumAndMultiply(a,b,c) {
+  var sumTotal = sum + c;
+  var productTotal = multiply * c;
   var arr = [];
-  arr.push(product, total);
-  var message = 
-
-
-
-}
-
-function multiply(a,b,c) {
-  var product = a * b * c;
-  var arr = [];
-  arr.push(product);
-  return arr;
+  arr.push(sumTotal, productTotal);
+  var message = a + 'and ' + b + 'and ' + c + 'sum to ' + sumTotal + '.';
+  arr.push(message);
+  
 }
 
 
 
 
-
-function sum(a, b, c) {
-  var total = a + b + c;
+function multiply(a,b) {
+  var product1 = a * b;
   var arr = [];
-  arr.push(total);
-  return arr;
+  arr.push(product1);
+
+}
+
+
+
+
+function sum(a, b) {
+  var sum1 = a + b;
+  var arr = [];
+  arr.push(sum1);
+  
 }
