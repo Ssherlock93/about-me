@@ -10,6 +10,7 @@ function sumAndMultiply(a,b,c) {
   arr.push(productTotal);
   var message = a + 'and ' + b + 'and ' + c + 'sum to ' + sumTotal + '.' + "The product of" + a + 'and' + b + 'and' + c + 'is' + productTotal + '.';
   arr.push(message);
+  return arr;
   
 }
 
