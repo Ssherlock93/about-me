@@ -1,3 +1,4 @@
+//Question three
 
 function sumAndMultiply(a,b,c) {
   var sumTemp = sum(a,b);
