@@ -28,6 +28,7 @@ function questionOne() {
   if (userHeight.toUpperCase() === 'NO') {
     alert('Sorry, I really am that tall!');
   } else {
+    alert(wrong);
   }
   console.log('userHeight', userHeight);
 }
@@ -64,13 +65,13 @@ questionTwo();
 // Third question asking if I like cars
 
 function questionThree() {
-  var userCars = prompt(userName + 'Do I like cars?');
+  var userCars = prompt('Do I like cars?');
   if (userCars.toUpperCase() === 'YES') {
     alert('That is right!');
     rightAnswers++;
 
    } else if(userCars.toUpperCase() === 'NO') {
-    alert('There must be something else that intersts you then');
+    alert('There must be something else that interests you then');
     incorrect++;
   } else {
     alert(wrong);
@@ -140,30 +141,24 @@ questionSix();
 
 //Question 7 is a number guessing game where the user will have 4 tries to 
 // guess my favorite number
-
-var favoriteNumber = '18';
-var userGuess; 
+var favoriteNumber = 18;
+var totalGuesses = 4;
+ 
 alert('Next is a question where you only have 4 chances to guess the correct answer');
-for (i = 0; i < 4; i++) {
-  userGuess = prompt('What is my favorite number?');
-  if (userGuess === '18') {
+for (var question7Guesses = 0; question7Guesses < totalGuesses; question7Guesses++) {
+  var userGuess = prompt('What is my favorite number?');
+  if (userGuess == favoriteNumber) {
     alert('That is my favorite number!');
     rightAnswers++;
     break;
-  } else if (userGuess < 18) {
-    alert('to low! try a little higher');
-  } else if (userGuess > 18) {
+  } else if (userGuess < favoriteNumber) {
+    alert('too low! try a little higher');
+  } else if (userGuess > favoriteNumber) {
     alert('Too high!');
+    
   }
 }
+
   console.log('rightAnswers',rightAnswers);
   console.log('incorrect', incorrect);
-
-// Car brands that I currently own question
-// User gets 6 trys to guess the names of some of the car brands that I have
-
-// function whichCar() {
-// var carBrand = ['MAZDA', 'FORD', 'SCION',];
-// var guess = 0;
-// var correctCar = [];
 
