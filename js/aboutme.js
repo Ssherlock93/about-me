@@ -22,19 +22,15 @@ console.log('userName', userName);
 var userHeight = prompt('Am I 6 feet 4 inches?');
 if (userHeight.toUpperCase() === 'YES') {
   alert('Why yes, yes I am');
+  rightAnswers++;
 }
 if (userHeight.toUpperCase() === 'NO') {
   alert('Sorry, I really am that tall!');
+  incorrect++;
 } else {
   alert(wrong);
 }
 console.log('userHeight', userHeight);
-
-
-
-
-
-
 
 
 // Question two asking if I enjoy my height
@@ -52,9 +48,6 @@ if (userHappy.toUpperCase() === 'YES') {
   alert(wrong);
 }
 console.log('userHappy', userHappy);
-
-
-
 
 
 
@@ -76,8 +69,8 @@ console.log('userCars', userCars);
 
 
 
-
 // Fourth question reguarding my love for coding
+
 
 var userCode = prompt('Do I love coding? (Trick question!)');
 if (userCode.toUpperCase() === 'YES') {
@@ -90,7 +83,6 @@ if (userCode.toUpperCase() === 'YES') {
   alert(wrong);
   console.log('userCode', userCode);
 }
-
 
 
 
@@ -109,7 +101,9 @@ if (userTraffic.toUpperCase() === 'YES') {
 }
 console.log('userTraffic', userTraffic);
 
+
 // Question six about eye color
+
 
 var userEye = prompt('Are my eyes green?');
 if (userEye.toUpperCase() === 'NO') {
@@ -128,13 +122,15 @@ console.log('incorrect', incorrect);
 
 //Question 7 is a number guessing game where the user will have 4 tries to
 // guess my favorite number
-var favoriteNumber = 18;
+
+
+var favoriteNumber = '18';
 var totalGuesses = 4;
 
 alert('Next is a question where you only have 4 chances to guess the correct answer');
 for (var question7Guesses = 0; question7Guesses < totalGuesses; question7Guesses++) {
   var userGuess = prompt('What is my favorite number?');
-  if (userGuess == favoriteNumber) {
+  if (userGuess === favoriteNumber) {
     alert('That is my favorite number!');
     rightAnswers++;
     break;
@@ -149,3 +145,29 @@ for (var question7Guesses = 0; question7Guesses < totalGuesses; question7Guesses
 console.log('rightAnswers',rightAnswers);
 console.log('incorrect', incorrect);
 
+
+// Question 8 is going to ask the user to guess which brands of cars I have owned. //There are several right answers.
+
+
+var rightCars = ['MAZDA', 'FORD', 'SCION'];
+var totalTries = 6;
+var correct = false;
+alert('Here is the final question. You will have 6 tries to guess a possible answer');
+for (var question8Guesses = 0; question8Guesses < totalTries; question8Guesses++) {
+  var userBrand = prompt('Name one brand of car that I own');
+  console.log('Question 8 answer' + userBrand);
+  if (rightCars.includes(userBrand.toUpperCase())) {
+    alert('Great job! I own a ' + rightCars[0] + ', ' + rightCars[1] + ', ' + rightCars[2]);
+    correct = true;
+    rightAnswers++;
+    break;
+  }
+  else {
+    alert('Try again');
+  }
+  if (question8Guesses === 6){
+    alert('Sorry, I own a ' + rightCars[0] + ', ' + rightCars[1] + ', ' + rightCars[2]);
+  }
+}
+
+alert('Great job, ' + userName + ' you got ' + rightAnswers + 'out of 8 answers right');
